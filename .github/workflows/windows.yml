@@ -142,6 +142,7 @@ jobs:
       - name: Save Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: ${{ matrix.os }}-cuda-${{ matrix.cuda-version }}-torch-${{ matrix.torch-version }}-${{ matrix.cmake-build-type }}
           path: |
             build
 
